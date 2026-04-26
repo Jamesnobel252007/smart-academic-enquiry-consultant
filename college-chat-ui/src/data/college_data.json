@@ -1,0 +1,63 @@
+{
+  "canteen": {
+    "location": "The canteen is beside the main block near the parking area.",
+    "menu": {
+      "breakfast": [
+        "Idli",
+        "Dosa",
+        "Pongal"
+      ],
+      "lunch": [
+        "Meals",
+        "Chapati"
+      ],
+      "snacks": [
+        "Puffs",
+        "Tea"
+      ]
+    }
+  },
+  "auditorium": "The auditorium is beside the main block in the west direction. It is used for conducting indoor games and events like cultural fests.",
+  "boys_hostel": "The boys hostel is near the play ground to the east of the EEE block. For further details please contact the hostel warden.",
+  "girls_hostel": "The girls hostel is near the nursing block in the west of the main block. For further details please contact the hostel warden.",
+  "fees": {
+    "dept": {
+      "IT department": {
+        "tuition_fee": "Rs. 50,000 per year",
+        "hostel_fee": "Rs. 30,000 per year (if hosteller)"
+      },
+      "CSBS department": {
+        "tuition_fee": "Rs. 50,000 per year",
+        "hostel_fee": "Rs. 30,000 per year (if hosteller)"
+      },
+      "CSE department": {
+        "tuition_fee": "Rs. 50,000 per year",
+        "hostel_fee": "Rs. 30,000 per year (if hosteller)"
+      },
+      "AIDS department": {
+        "tuition_fee": "Rs. 50,000 per year",
+        "hostel_fee": "Rs. 30,000 per year (if hosteller)"
+      }
+    },
+    "bus_fee": {
+      "ramnad": "15000",
+      "Rameshwaram": "36500",
+      "mandapam": "35000",
+      "Manamadurai": "37000",
+      "paramakudi": "40000"
+    }
+  },
+  "labs": {
+    "A.I.D.S lab": "The A.I.D.S lab is in the right corner of first floor near MBA department.",
+    "Main lab": "The main lab is in the left side of the first floor of the main block.",
+    "programming lab 1": "The programming lab 1 is in the left corner of the ground floor near SOC department.",
+    "Pg lab 1 ": "The Pg lab 1 is in the left corner of the ground floor near SOC department.",
+    "Programing lab 2": "The programming lab 2 is in the left corner of the first floor near the main lab.",
+    "Pg lab 2 ": "The Pg lab 2 is in the left corner of the first floor near the main lab.",
+    "CADD lab": "The CADD lab is in first floor near MBA Department."
+  },
+  "principal_room": "The principal room is on the ground floor of the main block on the left of the main block entrance.",
+  "office": "The office is in the main block on the right side of the entrance on the ground floor.",
+  "important_dates": "Internal exams start on April 20 and end on April 28.",
+  "library": "The library is on the east side of the main block, on the second floor of the EEE block. It has a variety of books and journals for reference and also for exam preparation. Use and prospectus are available in the library."
+}

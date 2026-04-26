@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Rajdhani:wght@500;700&display=swap');
+
+:root {
+  /* Dark Theme Colors */
+  --bg: #050505;
+  --surface: rgba(15, 15, 20, 0.8);
+  --accent: #00f2ff;
+  --accent-dim: rgba(0, 242, 255, 0.2);
+  --text: #e0e0e0;
+  --user-bg: rgba(99, 102, 241, 0.1);
+  --border: rgba(0, 242, 255, 0.3);
+}
+
+.theme-light {
+  --bg: #f0f4f8;
+  --surface: rgba(255, 255, 255, 0.9);
+  --accent: #4f46e5;
+  --accent-dim: rgba(79, 70, 229, 0.1);
+  --text: #1e293b;
+  --user-bg: rgba(79, 70, 229, 0.05);
+  --border: rgba(79, 70, 229, 0.2);
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  font-family: 'Rajdhani', sans-serif;
+  color: var(--text);
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+
+.app-viewport {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.futuristic-container {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  height: 90vh;
+  background: var(--surface);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Sidebar & Hologram */
+.cyber-sidebar {
+  flex: 0 0 340px;
+  border-right: 1px solid var(--border);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.scanner-line {
+  height: 2px;
+  background: var(--accent);
+  width: 100%;
+  box-shadow: 0 0 15px var(--accent);
+  animation: scan 3s infinite linear;
+  margin-bottom: 10px;
+}
+.cursor-block {
+  display: inline-block;
+  width: 8px;
+  height: 1em;
+  background: currentColor;
+  margin-left: 2px;
+  animation: blink 0.8s infinite;
+}
+
+
+
+.data-bubble {
+  background: rgba(0,0,0,0.3);
+  padding: 15px;
+  border-left: 3px solid var(--accent);
+  font-family: 'Space Mono', monospace;
+  font-size: 0.85rem;
+  margin-bottom: 20px;
+}
+
+.ai-hologram {
+  width: 100%;
+  margin-top: -100px;
+  filter: drop-shadow(0 0 20px var(--accent-dim));
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Chat Terminal */
+.terminal-chat {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.terminal-cursor {
+  animation: blink 0.8s infinite;
+}
+.terminal-header {
+  padding: 20px 30px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.terminal-header h1 { font-size: 1.5rem; letter-spacing: 4px; color: var(--accent); margin: 0; }
+.terminal-header p { font-size: 0.7rem; opacity: 0.6; margin: 0; }
+
+.message-flow {
+  flex: 1;
+  padding: 30px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background: repeating-linear-gradient(0deg, rgba(0,0,0,0.03) 0px, rgba(0,0,0,0.03) 1px, transparent 1px, transparent 2px);
+}
+
+.cyber-msg {
+  padding: 12px 20px;
+  border: 1px solid transparent;
+  max-width: 85%;
+}
+
+.cyber-msg.user {
+  align-self: flex-end;
+  background: var(--user-bg);
+  border-right: 4px solid var(--accent);
+}
+
+.cyber-msg.bot {
+  align-self: flex-start;
+  background: rgba(255,255,255,0.02);
+  border-left: 4px solid var(--accent);
+}
+
+.msg-tag {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.65rem;
+  color: var(--accent);
+  margin-bottom: 5px;
+}
+.msg-body {
+  white-space: pre-wrap;
+  line-height: 1.2;
+}
+
+/* Input Styles */
+.input-wrap {
+  padding: 25px 30px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.input-bracket { font-size: 2rem; color: var(--accent); font-weight: 300; }
+
+.input-wrap input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+  padding: 10px;
+  font-family: 'Space Mono', monospace;
+  outline: none;
+}
+
+.neon-btn {
+  background: transparent;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  padding: 10px 20px;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.neon-btn:hover {
+  background: var(--accent);
+  color: black;
+  box-shadow: 0 0 20px var(--accent);
+}
+
+/* Animations */
+@keyframes scan { 0% { opacity: 0.2; transform: translateY(0); } 50% { opacity: 1; } 100% { opacity: 0.2; transform: translateY(40px); } }
+@keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+.cursor-block { display: inline-block; width: 8px; height: 15px; background: var(--accent); animation: blink 0.8s infinite; }
+@keyframes blink { 50% { opacity: 0; }
+50.01%, 100% { opacity: 0; } }
+
+/* Add this to your existing App.css */
+
+.terminal-chat::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(
+      rgba(18, 16, 16, 0) 50%, 
+      rgba(0, 0, 0, 0.1) 50%
+  ), linear-gradient(
+      90deg, 
+      rgba(255, 0, 0, 0.02), 
+      rgba(0, 255, 0, 0.01), 
+      rgba(0, 0, 255, 0.02)
+  );
+  z-index: 10;
+  background-size: 100% 2px, 3px 100%;
+  pointer-events: none; /* Allows clicking through the overlay */
+}
+
+/* Enhanced Glow for Bot Messages */
+.cyber-msg.bot {
+  align-self: flex-start;
+  background: rgba(0, 242, 255, 0.03);
+  border-left: 2px solid var(--accent);
+  box-shadow: inset 10px 0 20px -10px var(--accent-dim);
+  color: var(--accent);
+  text-shadow: 0 0 5px var(--accent-dim);
+}
+
+/* User message distinction */
+.cyber-msg.user {
+  align-self: flex-end;
+  background: rgba(99, 102, 241, 0.08);
+  border-right: 2px solid #6366f1;
+  color: #a5b4fc;
+}
